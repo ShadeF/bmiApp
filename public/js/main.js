@@ -1,4 +1,4 @@
-const server = 'http://localhost:8080';
+const server = 'http://localhost:3000';
 
 document.querySelector('form').addEventListener('submit', (e) => {
     console.log("xxxx");
@@ -10,7 +10,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
     bmiValue = parseFloat(weightinput)/(parseFloat(heightinput) * parseFloat(heightinput));
     console.log("bmiValue", bmiValue);
     
-    document.getElementById('bmi-result').value = bmiValue;
+    document.getElementById('bmi-result').innerHTML = bmiValue;
 
     if(bmiValue < 18.5){
         document.getElementById('bmi-prediction').innerHTML = "You're in the underweight range!";
